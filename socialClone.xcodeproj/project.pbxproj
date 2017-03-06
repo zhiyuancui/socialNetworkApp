@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8FA6CF261E6A16FD00A837AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6CF251E6A16FD00A837AB /* AppDelegate.swift */; };
-		8FA6CF281E6A16FD00A837AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6CF271E6A16FD00A837AB /* ViewController.swift */; };
+		8FA6CF281E6A16FD00A837AB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6CF271E6A16FD00A837AB /* SignInVC.swift */; };
 		8FA6CF2B1E6A16FD00A837AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF291E6A16FD00A837AB /* Main.storyboard */; };
 		8FA6CF2E1E6A16FD00A837AB /* socialClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6CF2C1E6A16FD00A837AB /* socialClone.xcdatamodeld */; };
 		8FA6CF301E6A16FD00A837AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF2F1E6A16FD00A837AB /* Assets.xcassets */; };
 		8FA6CF331E6A16FD00A837AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF311E6A16FD00A837AB /* LaunchScreen.storyboard */; };
+		8FA6CF3B1E6A17C100A837AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF3A1E6A17C100A837AB /* GoogleService-Info.plist */; };
+		AEE13E1FF62807961404B08D /* Pods_socialClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A3766F895E7F1A94D9B883 /* Pods_socialClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64A3766F895E7F1A94D9B883 /* Pods_socialClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA6CF221E6A16FD00A837AB /* socialClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA6CF251E6A16FD00A837AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FA6CF271E6A16FD00A837AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FA6CF271E6A16FD00A837AB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		8FA6CF2A1E6A16FD00A837AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FA6CF2D1E6A16FD00A837AB /* socialClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = socialClone.xcdatamodel; sourceTree = "<group>"; };
 		8FA6CF2F1E6A16FD00A837AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FA6CF321E6A16FD00A837AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FA6CF341E6A16FD00A837AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FA6CF3A1E6A17C100A837AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB67A9934C71A2698C67EFA9 /* Pods-socialClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialClone/Pods-socialClone.debug.xcconfig"; sourceTree = "<group>"; };
+		F4837ACE84E8830D63682731 /* Pods-socialClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialClone/Pods-socialClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE13E1FF62807961404B08D /* Pods_socialClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				8FA6CF241E6A16FD00A837AB /* socialClone */,
 				8FA6CF231E6A16FD00A837AB /* Products */,
+				AB3A882A8354FFFE9CE5590E /* Pods */,
+				C315EA92422B082C9E6F6B59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,57 @@
 		8FA6CF241E6A16FD00A837AB /* socialClone */ = {
 			isa = PBXGroup;
 			children = (
+				8FA6CF3E1E6A1A2C00A837AB /* Controller */,
+				8FA6CF3D1E6A1A2700A837AB /* View */,
+				8FA6CF3C1E6A1A1D00A837AB /* Model */,
 				8FA6CF251E6A16FD00A837AB /* AppDelegate.swift */,
-				8FA6CF271E6A16FD00A837AB /* ViewController.swift */,
 				8FA6CF291E6A16FD00A837AB /* Main.storyboard */,
 				8FA6CF2F1E6A16FD00A837AB /* Assets.xcassets */,
 				8FA6CF311E6A16FD00A837AB /* LaunchScreen.storyboard */,
 				8FA6CF341E6A16FD00A837AB /* Info.plist */,
 				8FA6CF2C1E6A16FD00A837AB /* socialClone.xcdatamodeld */,
+				8FA6CF3A1E6A17C100A837AB /* GoogleService-Info.plist */,
 			);
 			path = socialClone;
+			sourceTree = "<group>";
+		};
+		8FA6CF3C1E6A1A1D00A837AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8FA6CF3D1E6A1A2700A837AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8FA6CF3E1E6A1A2C00A837AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FA6CF271E6A16FD00A837AB /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AB3A882A8354FFFE9CE5590E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB67A9934C71A2698C67EFA9 /* Pods-socialClone.debug.xcconfig */,
+				F4837ACE84E8830D63682731 /* Pods-socialClone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C315EA92422B082C9E6F6B59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64A3766F895E7F1A94D9B883 /* Pods_socialClone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA6CF371E6A16FD00A837AB /* Build configuration list for PBXNativeTarget "socialClone" */;
 			buildPhases = (
+				AB8BB0CE3614D3BD2D6B7936 /* [CP] Check Pods Manifest.lock */,
 				8FA6CF1E1E6A16FD00A837AB /* Sources */,
 				8FA6CF1F1E6A16FD00A837AB /* Frameworks */,
 				8FA6CF201E6A16FD00A837AB /* Resources */,
+				8D53EDB0C6C4F7077253960C /* [CP] Embed Pods Frameworks */,
+				E05C8DEDD922E92EF167589D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FA6CF331E6A16FD00A837AB /* LaunchScreen.storyboard in Resources */,
+				8FA6CF3B1E6A17C100A837AB /* GoogleService-Info.plist in Resources */,
 				8FA6CF301E6A16FD00A837AB /* Assets.xcassets in Resources */,
 				8FA6CF2B1E6A16FD00A837AB /* Main.storyboard in Resources */,
 			);
@@ -134,12 +189,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D53EDB0C6C4F7077253960C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-socialClone/Pods-socialClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB8BB0CE3614D3BD2D6B7936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E05C8DEDD922E92EF167589D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-socialClone/Pods-socialClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FA6CF1E1E6A16FD00A837AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FA6CF281E6A16FD00A837AB /* ViewController.swift in Sources */,
+				8FA6CF281E6A16FD00A837AB /* SignInVC.swift in Sources */,
 				8FA6CF2E1E6A16FD00A837AB /* socialClone.xcdatamodeld in Sources */,
 				8FA6CF261E6A16FD00A837AB /* AppDelegate.swift in Sources */,
 			);
@@ -260,6 +363,7 @@
 		};
 		8FA6CF381E6A16FD00A837AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB67A9934C71A2698C67EFA9 /* Pods-socialClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = socialClone/Info.plist;
@@ -272,6 +376,7 @@
 		};
 		8FA6CF391E6A16FD00A837AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4837ACE84E8830D63682731 /* Pods-socialClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = socialClone/Info.plist;
@@ -301,6 +406,7 @@
 				8FA6CF391E6A16FD00A837AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
