@@ -134,7 +134,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="f"/>
                                 <connections>
-                                    <action selector="SigninFromFB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j3U-WH-d3g"/>
+                                    <action selector="FBSignInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GdH-i4-LEl"/>
                                 </connections>
                             </button>
                         </subviews>
