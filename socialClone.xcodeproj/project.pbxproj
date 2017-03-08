@@ -14,6 +14,8 @@
 		8FA6CF301E6A16FD00A837AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF2F1E6A16FD00A837AB /* Assets.xcassets */; };
 		8FA6CF331E6A16FD00A837AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF311E6A16FD00A837AB /* LaunchScreen.storyboard */; };
 		8FA6CF3B1E6A17C100A837AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF3A1E6A17C100A837AB /* GoogleService-Info.plist */; };
+		8FFA04991E70AA47004A62E4 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA04981E70AA47004A62E4 /* FeedVC.swift */; };
+		8FFA049C1E70ABAB004A62E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA049B1E70ABAB004A62E4 /* Constants.swift */; };
 		AEE13E1FF62807961404B08D /* Pods_socialClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A3766F895E7F1A94D9B883 /* Pods_socialClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,9 @@
 		8FA6CF321E6A16FD00A837AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FA6CF341E6A16FD00A837AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FA6CF3A1E6A17C100A837AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8FFA04971E70A6A3004A62E4 /* socialClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socialClone.entitlements; sourceTree = "<group>"; };
+		8FFA04981E70AA47004A62E4 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		8FFA049B1E70ABAB004A62E4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB67A9934C71A2698C67EFA9 /* Pods-socialClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialClone/Pods-socialClone.debug.xcconfig"; sourceTree = "<group>"; };
 		F4837ACE84E8830D63682731 /* Pods-socialClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialClone/Pods-socialClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +52,7 @@
 		8FA6CF191E6A16FD00A837AB = {
 			isa = PBXGroup;
 			children = (
+				8FFA049A1E70AB8A004A62E4 /* Util */,
 				8FA6CF241E6A16FD00A837AB /* socialClone */,
 				8FA6CF231E6A16FD00A837AB /* Products */,
 				AB3A882A8354FFFE9CE5590E /* Pods */,
@@ -65,6 +71,7 @@
 		8FA6CF241E6A16FD00A837AB /* socialClone */ = {
 			isa = PBXGroup;
 			children = (
+				8FFA04971E70A6A3004A62E4 /* socialClone.entitlements */,
 				8FA6CF3E1E6A1A2C00A837AB /* Controller */,
 				8FA6CF3D1E6A1A2700A837AB /* View */,
 				8FA6CF3C1E6A1A1D00A837AB /* Model */,
@@ -97,8 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				8FA6CF271E6A16FD00A837AB /* SignInVC.swift */,
+				8FFA04981E70AA47004A62E4 /* FeedVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		8FFA049A1E70AB8A004A62E4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA049B1E70ABAB004A62E4 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		AB3A882A8354FFFE9CE5590E /* Pods */ = {
@@ -153,7 +169,13 @@
 				TargetAttributes = {
 					8FA6CF211E6A16FD00A837AB = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 28TQRMSQ7K;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -242,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA04991E70AA47004A62E4 /* FeedVC.swift in Sources */,
 				8FA6CF281E6A16FD00A837AB /* SignInVC.swift in Sources */,
+				8FFA049C1E70ABAB004A62E4 /* Constants.swift in Sources */,
 				8FA6CF2E1E6A16FD00A837AB /* socialClone.xcdatamodeld in Sources */,
 				8FA6CF261E6A16FD00A837AB /* AppDelegate.swift in Sources */,
 			);
@@ -366,7 +390,8 @@
 			baseConfigurationReference = DB67A9934C71A2698C67EFA9 /* Pods-socialClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = socialClone/socialClone.entitlements;
+				DEVELOPMENT_TEAM = 28TQRMSQ7K;
 				INFOPLIST_FILE = socialClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan.socialClone;
@@ -380,7 +405,8 @@
 			baseConfigurationReference = F4837ACE84E8830D63682731 /* Pods-socialClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = socialClone/socialClone.entitlements;
+				DEVELOPMENT_TEAM = 28TQRMSQ7K;
 				INFOPLIST_FILE = socialClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhiyuan.socialClone;
