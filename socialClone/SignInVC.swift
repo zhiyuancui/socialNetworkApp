@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController, UITextFieldDelegate {
 
@@ -60,6 +61,13 @@ class SignInVC: UIViewController, UITextFieldDelegate {
 
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        //Auto Sign in from Keychain
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField.tag ==  2, userField.text != ""{
             let length = (textField.text?.characters.count)! - range.length + string.characters.count;
@@ -103,7 +111,12 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         if let user = userField.text, let pwd = pwdField.text{
             FIRAuth.auth()?.signIn(withEmail: user, password: pwd, completion: {(user, error) in
                 if error == nil{
-                    //Move to next view
+                    //Save Keychain
+                    if let user = user{
+                        self.completeSignIn(id: user.uid)
+                    }
+                    
+                    //move to another view
                     print("MyPhotoApp: success signed in")
                 }else{
                     //password not match
@@ -130,8 +143,19 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                 print("MyPhotoApp: Unable to authenticate with Firebase. \(error)")
             }else{
                 print("MyPhotoApp: successfully authenticated with Firebase")
+                if let user = user{
+                    self.completeSignIn(id: user.uid)
+                }
             }
         })
+    }
+    
+    
+    //Save user credential using IOS Keychain
+    func completeSignIn(id: String){
+        KeychainWrapper.standard.set(id,forKey: KEY_UID);
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+        
     }
     
     //Create an attributeText for signup Label
