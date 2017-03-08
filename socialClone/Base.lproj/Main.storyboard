@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="trailing" secondItem="EyA-uo-xdJ" secondAttribute="trailing" constant="8" id="vdU-3S-Jue"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Nl-gll">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Nl-gll">
                                 <rect key="frame" x="53" y="168" width="269" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -65,7 +65,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-MD-SMR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-MD-SMR">
                                 <rect key="frame" x="53" y="223" width="269" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2SS-Vp-sdy"/>
@@ -73,11 +73,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgS-QN-g3l">
                                 <rect key="frame" x="53" y="300" width="269" height="40"/>
-                                <color key="backgroundColor" red="0.082352941176470587" green="0.396078431372549" blue="0.75294117647058822" alpha="0.38" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.082352941176470587" green="0.396078431372549" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="8bJ-8L-xIr"/>
                                     <constraint firstAttribute="height" constant="40" id="9sD-IX-bkX"/>
@@ -86,7 +86,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginWithPwd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ncS-SD-wyE"/>
+                                    <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="naQ-v6-JbR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your login details? Get help signing in." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmy-I4-Pd5">
@@ -176,10 +176,11 @@
                     </view>
                     <connections>
                         <outlet property="forgetPwdLabel" destination="tmy-I4-Pd5" id="0JG-v9-H5L"/>
+                        <outlet property="loginButton" destination="JgS-QN-g3l" id="FdX-Pz-RrA"/>
                         <outlet property="loginWithFB" destination="0Er-94-Kf4" id="AZZ-AE-N5E"/>
-                        <outlet property="password" destination="XBU-MD-SMR" id="upy-V3-56o"/>
+                        <outlet property="pwdField" destination="XBU-MD-SMR" id="q7g-Eb-4Hg"/>
                         <outlet property="signUpLabel" destination="EyA-uo-xdJ" id="Wyh-iT-YKa"/>
-                        <outlet property="username" destination="Xgx-Nl-gll" id="AaU-kc-jOb"/>
+                        <outlet property="userField" destination="Xgx-Nl-gll" id="z3a-gt-PTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

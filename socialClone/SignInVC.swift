@@ -11,19 +11,35 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var forgetPwdLabel: UILabel!
     
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var userField: UITextField!
+    @IBOutlet weak var pwdField: UITextField!
+    
     @IBOutlet weak var loginWithFB: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var loginTryTimes = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //Setup delegate
+        userField.delegate = self;
+        pwdField.delegate = self;
+        userField.tag = 1;
+        pwdField.tag = 2;
+        
+        //Disable Login Button
+        loginButton.isUserInteractionEnabled = false;
+        loginButton.alpha = 0.38;
+
+        
+        //Setup FB auth
         signUpLabel.attributedText = getSignUpAttributedText()
         forgetPwdLabel.attributedText = getForgetPwdArributedText()
         
@@ -32,6 +48,7 @@ class SignInVC: UIViewController {
         signUpLabel.isUserInteractionEnabled = true
         signUpLabel.addGestureRecognizer(signUpTap)
         
+
         let forgetPwdTap = UITapGestureRecognizer(target: self, action: #selector(self.forgetPwdTapFunction))
         forgetPwdLabel.isUserInteractionEnabled = true
         forgetPwdLabel.addGestureRecognizer(forgetPwdTap)
@@ -43,12 +60,20 @@ class SignInVC: UIViewController {
 
     }
 
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.tag ==  2, userField.text != ""{
+            let length = (textField.text?.characters.count)! - range.length + string.characters.count;
+            if( length > 0 ){
+                loginButton.isUserInteractionEnabled = true;
+                loginButton.alpha = 1;
+            }
+        }
+        return true;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func LoginWithPwd(_ sender: UIButton) {
     }
     
     
@@ -72,6 +97,30 @@ class SignInVC: UIViewController {
             }
         }
 
+    }
+    
+    @IBAction func LoginTapped(_ sender: UIButton) {
+        if let user = userField.text, let pwd = pwdField.text{
+            FIRAuth.auth()?.signIn(withEmail: user, password: pwd, completion: {(user, error) in
+                if error == nil{
+                    //Move to next view
+                    print("MyPhotoApp: success signed in")
+                }else{
+                    //password not match
+                    if self.loginTryTimes == 0{
+                        let alert = UIAlertController(title:"Incorrect Password",message:"Your password is not correct.", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title:"Try Again", style:UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated:true, completion:nil)
+                    }else {
+                        let alert = UIAlertController(title:"Forgotten Password?",message:"Your password is not correct.", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title:"Try Again", style:UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated:true, completion:nil)
+                    }
+                    self.loginTryTimes+=1;
+                }
+                
+            })
+        }
     }
     
     func firebaseAuth(_ credential: FIRAuthCredential){
