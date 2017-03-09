@@ -55,6 +55,7 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
   - SwiftKeychainWrapper (3.0.1)
+  - XLPagerTabStrip (6.0.0)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - SwiftKeychainWrapper
+  - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -80,7 +82,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  XLPagerTabStrip: c46e802a8dcac29edbcea573de8fe920e052455b
 
-PODFILE CHECKSUM: 725b56fa9a6847237f2de35a105f5058cd98dca5
+PODFILE CHECKSUM: 3ca9f2cd16557c0b7e7774aa1afd5d90f54cbc19
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.2.0

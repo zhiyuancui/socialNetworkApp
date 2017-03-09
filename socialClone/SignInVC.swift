@@ -54,9 +54,9 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         forgetPwdLabel.isUserInteractionEnabled = true
         forgetPwdLabel.addGestureRecognizer(forgetPwdTap)
         
-        let letSignInTap = UITapGestureRecognizer(target: self, action: #selector(self.SignInWithFBTapFunction))
+        let SignInTap = UITapGestureRecognizer(target: self, action: #selector(self.SignInWithFBTapFunction))
         loginWithFB.isUserInteractionEnabled = true
-        loginWithFB.addGestureRecognizer(letSignInTap)
+        loginWithFB.addGestureRecognizer(SignInTap)
 
 
     }
@@ -193,7 +193,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         let index = signUpLabel.indexOfAttributedTextCharacterAtPoint(point: tapLocation)
         if( index > 22 ){
             //Bring up sing up page
-            print("sign up")
+           performSegue(withIdentifier: "goToSignUp", sender: nil)
         }
     }
 
