@@ -37,6 +37,7 @@ class SignUpParentVC: ButtonBarPagerTabStripViewController{
         }
         super.viewDidLoad()
         
+        //Setup SignIn Label
         signInLabel.attributedText = getSignInAttributedText()
         let SignInTap = UITapGestureRecognizer(target: self, action: #selector(self.signInTap))
         signInLabel.isUserInteractionEnabled = true

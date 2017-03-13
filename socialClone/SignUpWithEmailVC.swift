@@ -55,6 +55,17 @@ class SignUpWithEmailVC: UIViewController, IndicatorInfoProvider,UITextFieldDele
     
     @IBAction func NextTapped(_ sender: UIButton) {
         
+        performSegue(withIdentifier: "goToNamePwd", sender: emailField.text)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNamePwd"{
+            if let controller = segue.destination as? SignUpNameVC{
+                if let inputEmail = sender as? String{
+                    controller.email = inputEmail;
+                }
+            }
+        }
     }
     
 }

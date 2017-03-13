@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F32CDE41E771CCD004D4C42 /* SignUpNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32CDE31E771CCD004D4C42 /* SignUpNameVC.swift */; };
 		8FA6CF261E6A16FD00A837AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6CF251E6A16FD00A837AB /* AppDelegate.swift */; };
 		8FA6CF281E6A16FD00A837AB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6CF271E6A16FD00A837AB /* SignInVC.swift */; };
 		8FA6CF2B1E6A16FD00A837AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6CF291E6A16FD00A837AB /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		64A3766F895E7F1A94D9B883 /* Pods_socialClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F32CDE31E771CCD004D4C42 /* SignUpNameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNameVC.swift; sourceTree = "<group>"; };
 		8FA6CF221E6A16FD00A837AB /* socialClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA6CF251E6A16FD00A837AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FA6CF271E6A16FD00A837AB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				8FBFF9BF1E71EEF7002F4398 /* SignUpParentVC.swift */,
 				8FBFF9C11E71F769002F4398 /* SignUpWithPhoneVC.swift */,
 				8FBFF9C31E71F787002F4398 /* SignUpWithEmailVC.swift */,
+				8F32CDE31E771CCD004D4C42 /* SignUpNameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				8FA6CF2E1E6A16FD00A837AB /* socialClone.xcdatamodeld in Sources */,
 				8FBFF9C01E71EEF7002F4398 /* SignUpParentVC.swift in Sources */,
 				8FA6CF261E6A16FD00A837AB /* AppDelegate.swift in Sources */,
+				8F32CDE41E771CCD004D4C42 /* SignUpNameVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
